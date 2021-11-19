@@ -18,6 +18,29 @@ g = Plot[{f[t], t}, {t, -\[Pi]/2, \[Pi]/2},
 ```
 </details>
 
+<details>
+ <summary>Fourier Transform of Piecewise function</summary>
+ 
+```
+FourierTransform[
+ Piecewise[{{0, x < 0}, {Exp[-x], x > 0}}], x, \[Omega]]
+```
+</details>
+
+ <details>
+ <summary>Steps</summary>
+  
+ ```
+ ShowSteps[exp_] := 
+ WolframAlpha[
+  ToString@HoldForm@InputForm@exp, {{"Input", 2}, "Content"}, 
+  PodStates -> {"Input__Step-by-step solution"}]
+
+SetAttributes[ShowSteps, HoldAll]
+ ```
+  
+  </details>
+ 
 ## MatLab
 
 ## Fortran
